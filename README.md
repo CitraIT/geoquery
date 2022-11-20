@@ -10,7 +10,11 @@ python -m pip install geoip2
 ### Executing  
 1. Clone this repository (with git or downloading it as zip then extract it).  
 2. Export the list of extracted IP's into a file named ips.txt.  
-3. Put the file ips.txt in the same folder as the geoquery.py file.
+For example, to extract ips found on /var/log/auth.log use the command bellow:  
+```
+sudo egrep -h -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' /var/log/auth.log > /tmp/ips.txt
+```
+3. Put the file ips.txt in the same folder as the geoquery.py file (inside src folder).
 4. Install geoip2 python dependency.  
 ```
 python -m pip install geoip2  
